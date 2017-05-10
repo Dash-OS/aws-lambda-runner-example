@@ -1,0 +1,14 @@
+{
+  "name": "<name>",
+  "description": "<description>",
+  "runtime": "nodejs6.10",
+  "handler": "lib.default",
+  "memory": 128,
+  "timeout": 10,
+  "role": "<aws-role>",
+  "environment": {},
+  "hooks": {
+    "build": "../../node_modules/.bin/webpack --config ../../webpack.config.babel.js --bail",
+    "clean": "rm -fr lib"
+  }
+}
